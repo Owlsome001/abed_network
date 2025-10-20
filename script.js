@@ -327,5 +327,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    console.log('HotSpot Pro Website - Loaded Successfully! 🚀');
+    console.log('ABED Network Website - Loaded Successfully! 🚀');
 });
