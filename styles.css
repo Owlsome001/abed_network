@@ -6,16 +6,16 @@
 }
 
 :root {
-    --primary: #6366f1;
-    --primary-dark: #4f46e5;
-    --secondary: #8b5cf6;
-    --accent: #ec4899;
-    --dark: #1e293b;
+    --primary: #021a55;
+    --primary-dark: #010f35;
+    --secondary: #ffc600;
+    --accent: #ffc600;
+    --dark: #000000;
     --light: #f8fafc;
     --gray: #64748b;
     --gray-light: #e2e8f0;
     --white: #ffffff;
-    --gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+    --gradient: linear-gradient(135deg, #021a55 0%, #ffc600 100%);
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
@@ -125,7 +125,7 @@ body {
 /* Hero Section */
 .hero {
     padding: 150px 0 100px;
-    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+    background: linear-gradient(135deg, #f8fafc 0%, #e8f4ff 100%);
     position: relative;
     overflow: hidden;
 }
@@ -137,7 +137,7 @@ body {
     right: -20%;
     width: 800px;
     height: 800px;
-    background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(2, 26, 85, 0.1) 0%, transparent 70%);
     border-radius: 50%;
 }
 
@@ -195,25 +195,27 @@ body {
 }
 
 .btn-primary {
-    background: var(--gradient);
+    background: var(--primary);
     color: var(--white);
-    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 10px 25px rgba(2, 26, 85, 0.3);
 }
 
 .btn-primary:hover {
+    background: var(--primary-dark);
     transform: translateY(-2px);
-    box-shadow: 0 15px 35px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 15px 35px rgba(2, 26, 85, 0.4);
 }
 
 .btn-secondary {
-    background: var(--white);
+    background: var(--secondary);
     color: var(--primary);
-    border: 2px solid var(--primary);
+    border: 2px solid var(--secondary);
 }
 
 .btn-secondary:hover {
     background: var(--primary);
     color: var(--white);
+    border-color: var(--primary);
     transform: translateY(-2px);
 }
 
@@ -367,14 +369,17 @@ body {
 /* Pricing Section */
 .pricing {
     padding: 100px 0;
-    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+    background: linear-gradient(135deg, #f8fafc 0%, #e8f4ff 100%);
 }
 
 .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
     margin-top: 3rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .pricing-card {
@@ -406,11 +411,11 @@ body {
     top: -15px;
     left: 50%;
     transform: translateX(-50%);
-    background: var(--gradient);
-    color: var(--white);
+    background: var(--secondary);
+    color: var(--primary);
     padding: 0.5rem 1.5rem;
     border-radius: 50px;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 0.875rem;
 }
 
@@ -449,6 +454,50 @@ body {
     color: var(--gray);
 }
 
+/* Pricing Options Styles */
+.pricing-options {
+    margin-bottom: 2rem;
+}
+
+.pricing-option {
+    background: var(--light);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border: 2px solid var(--gray-light);
+    transition: all 0.3s ease;
+}
+
+.pricing-option:hover {
+    border-color: var(--primary);
+    transform: translateX(5px);
+}
+
+.option-duration {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.option-price {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--dark);
+}
+
+.featured .pricing-option {
+    background: linear-gradient(135deg, rgba(2, 26, 85, 0.05) 0%, rgba(255, 198, 0, 0.05) 100%);
+    border-color: var(--secondary);
+}
+
+.featured .option-price {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
 .pricing-features {
     list-style: none;
     margin-bottom: 2rem;
@@ -473,7 +522,7 @@ body {
 /* CTA Section */
 .cta {
     padding: 100px 0;
-    background: var(--gradient);
+    background: var(--primary);
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -592,7 +641,7 @@ body {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    box-shadow: 0 0 0 3px rgba(2, 26, 85, 0.1);
 }
 
 .form-group textarea {
