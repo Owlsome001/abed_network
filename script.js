@@ -117,45 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Contact Form Submission
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const message = document.getElementById('message').value;
-
-            // Basic validation
-            if (!name || !email || !phone || !message) {
-                showNotification('Veuillez remplir tous les champs.', 'error');
-                return;
-            }
-
-            // Email validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                showNotification('Veuillez entrer une adresse email valide.', 'error');
-                return;
-            }
-
-            // Simulate form submission
-            const submitButton = contactForm.querySelector('button[type="submit"]');
-            submitButton.textContent = 'Envoi en cours...';
-            submitButton.disabled = true;
-
-            // Simulate API call
-            setTimeout(() => {
-                showNotification('Merci pour votre message ! Nous vous contacterons bientôt.', 'success');
-                contactForm.reset();
-                submitButton.textContent = 'Envoyer le message';
-                submitButton.disabled = false;
-            }, 1500);
-        });
-    }
+    // WhatsApp Contact Section - No form validation needed as we use direct WhatsApp links
 
     // Notification function
     function showNotification(message, type = 'success') {

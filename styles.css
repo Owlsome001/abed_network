@@ -25,7 +25,7 @@ html {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
     color: var(--dark);
     background-color: var(--light);
@@ -615,43 +615,182 @@ body {
     line-height: 1.8;
 }
 
-.contact-form {
-    background: var(--light);
+/* WhatsApp Contact Section */
+.whatsapp-contact {
+    background: var(--gradient);
     padding: 3rem;
     border-radius: 20px;
+    color: white;
+    position: relative;
+    overflow: hidden;
 }
 
-.form-group {
-    margin-bottom: 1.5rem;
+.whatsapp-contact::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    z-index: 1;
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    color: var(--dark);
+.whatsapp-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
 }
 
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 1rem;
-    border: 2px solid var(--gray-light);
+.whatsapp-icon {
+    background: rgba(255, 255, 255, 0.2);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.whatsapp-info h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.whatsapp-info p {
+    margin: 0.25rem 0 0 0;
+    opacity: 0.9;
+}
+
+.whatsapp-benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.75rem;
     border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.benefit-item i {
+    font-size: 1.25rem;
+}
+
+.whatsapp-number {
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.number-label {
+    display: block;
     font-size: 1rem;
-    font-family: inherit;
+    opacity: 0.9;
+    margin-bottom: 0.5rem;
+}
+
+.number-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 1rem;
+    border-radius: 10px;
+    letter-spacing: 1px;
+}
+
+.whatsapp-actions {
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.btn-whatsapp {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--primary);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(2, 26, 85, 0.1);
+.btn-whatsapp:hover {
+    background: white;
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
-.form-group textarea {
-    resize: vertical;
+.btn-whatsapp i {
+    font-size: 1.25rem;
+}
+
+.whatsapp-note {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    opacity: 0.8;
+}
+
+.quick-messages {
+    position: relative;
+    z-index: 2;
+}
+
+.quick-messages h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.quick-message-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.quick-msg-btn {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.quick-msg-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateX(5px);
 }
 
 /* Footer */
@@ -864,6 +1003,14 @@ body {
         gap: 1rem;
         text-align: center;
     }
+
+    .contact-info {
+        display: none;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 480px) {
@@ -879,8 +1026,27 @@ body {
         font-size: 2.5rem;
     }
 
-    .contact-form {
+    .whatsapp-contact {
         padding: 2rem;
+    }
+
+    .whatsapp-benefits {
+        grid-template-columns: 1fr;
+    }
+
+    .whatsapp-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .quick-message-buttons {
+        gap: 0.5rem;
+    }
+
+    .quick-msg-btn {
+        font-size: 0.85rem;
+        padding: 0.6rem 0.8rem;
     }
 }
 

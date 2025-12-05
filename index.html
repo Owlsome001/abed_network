@@ -6,6 +6,10 @@
     <title>ABED Network - Connexion WiFi Rapide et Fiable</title>
     <link rel="icon" type="image/png" href="img/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -237,25 +241,55 @@
                         </div>
                     </div>
                 </div>
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Nom complet</label>
-                        <input type="text" id="name" name="name" required>
+                <div class="whatsapp-contact">
+                    <div class="whatsapp-header">
+                        <div class="whatsapp-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="whatsapp-info">
+                            <h3>Contactez-nous sur WhatsApp</h3>
+                            <p>Réponse rapide garantie</p>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
+
+                    <div class="whatsapp-number">
+                        <span class="number-label">Notre numéro WhatsApp :</span>
+                        <span class="number-value">+243 846 654 928</span>
                     </div>
-                    <div class="form-group">
-                        <label for="phone">Téléphone</label>
-                        <input type="tel" id="phone" name="phone" required>
+
+                    <div class="whatsapp-actions">
+                        <a href="https://wa.me/243846654928?text=Bonjour%20ABED%20Network,%20je%20souhaite%20plus%20d'informations%20sur%20vos%20forfaits%20internet." 
+                           target="_blank" 
+                           class="btn btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            Démarrer la conversation
+                        </a>
+                        <p class="whatsapp-note">
+                            Cliquez pour ouvrir WhatsApp automatiquement avec un message pré-rempli
+                        </p>
                     </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <div class="quick-messages">
+                        <h4>Messages rapides :</h4>
+                        <div class="quick-message-buttons">
+                            <a href="https://wa.me/243846654928?text=Bonjour,%20quels%20sont%20vos%20forfaits%20disponibles%20?" 
+                               target="_blank" 
+                               class="quick-msg-btn">
+                                💰 Acheter un forfait
+                            </a>
+                            <a href="https://wa.me/243846654928?text=Bonjour,%20j'ai%20un%20problème%20de%20connexion,%20pouvez-vous%20m'aider%20?" 
+                               target="_blank" 
+                               class="quick-msg-btn">
+                                🛠️ Support technique
+                            </a>
+                            <a href="https://wa.me/243846654928?text=Bonjour,%20où%20puis-je%20vous%20rencontrer%20pour%20souscrire%20?" 
+                               target="_blank" 
+                               class="quick-msg-btn">
+                                📍 Rendez-vous
+                            </a>
+                        </div>
                     </div>
-                    <button type="submit" class="btn btn-primary full-width">Envoyer le message</button>
-                </form>
+                </div>
             </div>
         </div>
     </section>
@@ -314,7 +348,6 @@
             </div>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
